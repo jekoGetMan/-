@@ -7,7 +7,7 @@ void ft_ultimate_div_mod(int *a, int *b)
 
 	int Result1;
 	int Result2;
-
+ч
 	*a = Result1;
 	*b = Result2;
 

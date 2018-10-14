@@ -1,28 +1,25 @@
-#include <stdio.h>
+#include <unistd.h>
 
-// struct coord
-// {
-// 	int x;
-// 	int y;
-// };
+void ft_putchar(char display)
+{
+	write(1, &display, 1);
+}
 
-// struct coord{
-// 	int x;
-// 	int y;
-// } first, second;
+void ft_print_alphabet(void)
+{
+	unsigned short int index;
+	
+	index = 'a'; // 97
+	while (index <= 'z') // 97 <= 122
+	{
+		ft_putchar(index);
+		index++; // b	- 98...
+	}
+	ft_putchar('\n');
+}
 
-struct coord {
-	int x;
-	int y;
-};
-struct coord first, second;
-
-first.x = 50;
-first.y = 100;
-
-printf("%d, %d", second.x, second.y);
-
-first = second;
-
-first.x = second.x;
-first.y = second.y;
+int main(void)
+{
+	ft_print_alphabet();
+	return (0);
+}
