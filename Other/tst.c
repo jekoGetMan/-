@@ -1,25 +1,16 @@
-#include <unistd.h>
+#include <stdio.h>
 
-void ft_putchar(char display)
-{
-	write(1, &display, 1);
-}
+int	main(void){
 
-void ft_print_alphabet(void)
-{
-	unsigned short int index;
-	
-	index = 'a'; // 97
-	while (index <= 'z') // 97 <= 122
-	{
-		ft_putchar(index);
-		index++; // b	- 98...
+	unsigned short int i;
+	unsigned short int j;
+
+	i = 1;
+	j = 1;
+
+	for (i = 1; i < 3; i++){
+		printf("i: %d, ", i);
+			for (j = 1; j <= 3; j++)
+				printf("j: %d, ", j);
 	}
-	ft_putchar('\n');
-}
-
-int main(void)
-{
-	ft_print_alphabet();
-	return (0);
 }
